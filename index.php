@@ -1,42 +1,20 @@
 <?php
-
 class Person {
-  private $firstname;
-  private $lastname;
-
-  public function setFirstname($pFirstname) {
-    $this->firstname = $pFirstname;
-  }
-
-  public function getFirstname() {
-    return $this->firstname;
-  }
-
-  public function setLastname($pLastname) {
-    $this->lastname = $pLastname;
-  }
-
-  public function getLastname() {
-    return $this->lastname;
-  }
-
-  public function speak() {
-    return "Hello my name is " . $this->firstname . " " . $this->lastname;
-  }
+    private $firstname;
+    private $lastname;
+    public function __construct($pFirstname, $pLastname) {
+        $this->firstname = $pFirstname;
+        $this->lastname = $pLastname;
+    }
+    public function speak() { }
 }
-
-$person1 = new Person();
-//$person1->firstname ="John";
-//$person1->lastname ="Doe";
-
-$person1->setFirstname("John");
-$person1->setLastname("Doe");
-
-var_dump($person1->getFirstname());
-var_dump($person1->getLastname());
-var_dump($person1->speak());
-
-//$person2 = new Person();
-//$person2->firstname ="Jane";
-//$person2->lastname ="Die";
-//var_dump($person2);
+class Dog {
+    private $name;
+    public function __construct($pName) {
+        $this->name = $pName;
+    }
+}
+$person = new Person("John", "Doe");
+var_dump($person);
+$dog = new Dog("Johnny");
+var_dump($dog);

@@ -1,5 +1,6 @@
 <?php
 class Person {
+    private $dog;
     private $firstname;
     private $lastname;
     public function __construct($pFirstname, $pLastname) {
@@ -7,6 +8,9 @@ class Person {
         $this->lastname = $pLastname;
     }
     public function speak() { }
+    public function buy($pDog) {
+        $this->dog = $pDog;
+    }
 }
 class Dog {
     private $name;
@@ -15,6 +19,6 @@ class Dog {
     }
 }
 $person = new Person("John", "Doe");
-var_dump($person);
 $dog = new Dog("Johnny");
-var_dump($dog);
+$person->buy($dog);
+var_dump($person);

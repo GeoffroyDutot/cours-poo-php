@@ -30,6 +30,12 @@ class Person extends Mammal {
 }
 class Dog extends Mammal {
     private $name;
+    public function __construct(string $pName, int $pYears) {
+        parent::__construct($pYears);
+        $this->name = $pName;
+    }
 }
 $person = new Person("John", "Doe", 1);
 var_dump($person);
+$dog = new Dog("Boby", 1);
+var_dump($dog);

@@ -1,5 +1,4 @@
 <?php
-namespace framework;
 class Client {
     private $id;
     private $firstname;
